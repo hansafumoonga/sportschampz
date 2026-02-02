@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sports Chaplaincy Zambia provides spiritual care, mentorship, and chaplaincy services to athletes, coaches, and sports personnel across Zambia.">
+    <title>Home - Sports Chaplaincy Zambia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Sports Chaplaincy Zambia Logo" class="logo">
+            </a>
+            
+            <!-- Fixed Donate Button - Always Visible, positioned between logo and hamburger on mobile -->
+            <a class="btn btn-primary btn-sm donate-btn-fixed" href="donate.html">
+                <i class="bi bi-heart-fill me-1"></i>Donate
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="our-work.html">Our Work</a></li>
+                            <li><a class="dropdown-item" href="newsletter.html">Newsletter & Resources</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="join-us.html">Join Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <!-- Donate button inside menu for mobile layout -->
+                    <li class="nav-item d-lg-none">
+                        <a class="btn btn-primary btn-sm donate-btn-inline w-100" href="donate.html">
+                            <i class="bi bi-heart-fill me-1"></i>Donate
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('images/hero-1.jpg');">
+                <div class="carousel-caption">
+                    <h2>Nurturing Athletes Through Faith</h2>
+                    <p>Providing spiritual care and mentorship to sports communities across Zambia</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/hero-2.jpg');">
+                <div class="carousel-caption">
+                    <h2>Building Character Through Sports</h2>
+                    <p>Fostering discipline, integrity, and excellence in athletics</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/hero-3.jpg');">
+                <div class="carousel-caption">
+                    <h2>Training Sports Chaplains</h2>
+                    <p>Equipping individuals to serve athletes with pastoral and spiritual care</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/hero-5.jpg');">
+                <div class="carousel-caption">
+                    <h2>Transforming Lives Through Ministry</h2>
+                    <p>Supporting mental well-being and holistic development of sports personnel</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Mission & Vision Section -->
+        <section id="mission-vision">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Purpose</h2>
+                    <p>Guided by Christian faith and recognizing the power of sports in shaping character</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="mission-vision-box">
+                            <h3><i class="bi bi-eye text-success me-2"></i>Vision</h3>
+                            <p>To be a leading faith-based organization that nurtures athletes and sports communities through spiritual care, mentoring, and chaplaincy services, fostering holistic personal and professional development.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="mission-vision-box">
+                            <h3><i class="bi bi-bullseye text-warning me-2"></i>Mission</h3>
+                            <p>To provide pastoral and spiritual care, mentorship, and ethical guidance to athletes, coaches, and sports personnel, helping them navigate personal and professional challenges while promoting integrity, discipline, and excellence in sports. Additionally, to train and equip individuals to become sports chaplains.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section id="what-we-do" class="bg-light-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What We Do</h2>
+                    <p>Supporting sports communities through comprehensive chaplaincy services</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card">
+                            <div class="card-body text-center">
+                                <div class="card-icon green">
+                                    <i class="bi bi-heart-pulse"></i>
+                                </div>
+                                <h3 class="card-title">Chaplaincy Services</h3>
+                                <p class="card-text">Providing pastoral and spiritual care to athletes, coaches, and sports personnel throughout their careers and personal journeys.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card">
+                            <div class="card-body text-center">
+                                <div class="card-icon orange">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <h3 class="card-title">Training & Equipping</h3>
+                                <p class="card-text">Identifying, training, and nurturing individuals to become effective sports chaplains who can serve with excellence.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card">
+                            <div class="card-body text-center">
+                                <div class="card-icon green">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <h3 class="card-title">Mental Well-being Support</h3>
+                                <p class="card-text">Supporting athletes' mental health, self-esteem, and emotional resilience through counseling and mentorship programs.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card">
+                            <div class="card-body text-center">
+                                <div class="card-icon orange">
+                                    <i class="bi bi-award"></i>
+                                </div>
+                                <h3 class="card-title">Character Development</h3>
+                                <p class="card-text">Fostering self-discipline, perseverance, and integrity among athletes through Christian values and ethical guidance.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card">
+                            <div class="card-body text-center">
+                                <div class="card-icon green">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                </div>
+                                <h3 class="card-title">Healthy Lifestyles</h3>
+                                <p class="card-text">Combating substance abuse and promoting healthy living through education, support, and biblical principles.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card">
+                            <div class="card-body text-center">
+                                <div class="card-icon orange">
+                                    <i class="bi bi-globe-americas"></i>
+                                </div>
+                                <h3 class="card-title">Community Outreach</h3>
+                                <p class="card-text">Engaging in sports evangelism and building a nationwide network of chaplains to reach communities.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Objectives Section -->
+        <section id="objectives">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Objectives</h2>
+                    <p>Key goals driving our mission forward</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="mission-vision-box">
+                            <ul>
+                                <li>Provide chaplaincy services to athletes, coaches, and sports personnel</li>
+                                <li>Advocate for and champion the needs for chaplains</li>
+                                <li>Identify, equip, train, nurture, place, guide, and supervise sports chaplains</li>
+                                <li>Promote spiritual growth and Christian values in sports</li>
+                                <li>Combat substance abuse and encourage healthy lifestyles</li>
+                                <li>Foster self-discipline, self-denial, and perseverance among athletes</li>
+                                <li>Support athletes' mental well-being and self-esteem</li>
+                                <li>Engage in community outreach and sports evangelism</li>
+                                <li>Build a nationwide network of sports chaplains</li>
+                                <li>Collaborate with churches, sports organizations, and government agencies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="cta" class="bg-light-section">
+            <div class="container text-center">
+                <h2 class="mb-4" style="color: var(--primary-green); font-weight: 700;">Join Us in Making a Difference</h2>
+                <p class="lead mb-4" style="color: var(--gray-600); max-width: 700px; margin: 0 auto 2rem;">Whether you're an athlete seeking spiritual support, a church leader interested in sports ministry, or someone called to serve as a sports chaplain, we welcome you to be part of our mission.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="join-us.html" class="btn btn-primary btn-lg">Become a Member</a>
+                    <a href="contact.html" class="btn btn-orange btn-lg">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Partners Section -->
+        <section class="our-partners py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Partners</h2>
+                <div class="row justify-content-center align-items-center g-4">
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner1.png" alt="Ministry of Sports Partner" class="partner-logo">
+                            <p class="partner-caption">Football Association of Zambia FAZ</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner2.png" alt="Zambia Sports Council" class="partner-logo">
+                            <p class="partner-caption">Victorious LIFE</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner3.png" alt="National Olympic Committee" class="partner-logo">
+                            <p class="partner-caption">Freely In Hope</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner4.png" alt="Churches Association" class="partner-logo">
+                            <p class="partner-caption">Zambia Sports Council NASDC</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner5.png" alt="Youth Sports Foundation" class="partner-logo">
+                            <p class="partner-caption">Ministry of Sports & Youth Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="footer-section">
+                            <h4>Sports Chaplaincy Zambia</h4>
+                            <p>A faith-based organization nurturing athletes and sports communities through spiritual care, mentoring, and chaplaincy services.</p>
+                            <p class="mt-3"><strong>Location:</strong><br>Avondale, Lusaka, Zambia</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="footer-section">
+                            <h4>Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+                                <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                                <li><a href="our-work.html"><i class="bi bi-chevron-right"></i> Our Work</a></li>
+                                <li><a href="join-us.html"><i class="bi bi-chevron-right"></i> Join Us</a></li>
+                                <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
+                                <li><a href="newsletter.html"><i class="bi bi-chevron-right"></i> Newsletter & Resources – View Archive</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="footer-section">
+                            <h4>Support Our Mission</h4>
+                            <p>Your donations help us provide spiritual care and mentorship to athletes across Zambia.</p>
+                            <a href="donate.html" class="btn btn-primary mt-2">
+                                <i class="bi bi-heart-fill me-2"></i>Donate Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sports Chaplaincy Zambia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
