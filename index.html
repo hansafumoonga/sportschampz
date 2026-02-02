@@ -20,10 +20,17 @@
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Sports Chaplaincy Zambia Logo" class="logo">
             </a>
+            
+            <!-- Fixed Donate Button - Always Visible, positioned between logo and hamburger on mobile -->
+            <a class="btn btn-primary btn-sm donate-btn-fixed" href="donate.html">
+                <i class="bi bi-heart-fill me-1"></i>Donate
+            </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -32,14 +39,26 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="our-work.html">Our Work</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="our-work.html">Our Work</a></li>
+                            <li><a class="dropdown-item" href="newsletter.html">Newsletter & Resources</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="join-us.html">Join Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <!-- Donate button inside menu for mobile layout -->
+                    <li class="nav-item d-lg-none">
+                        <a class="btn btn-primary btn-sm donate-btn-inline w-100" href="donate.html">
+                            <i class="bi bi-heart-fill me-1"></i>Donate
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -233,6 +252,45 @@
                 </div>
             </div>
         </section>
+
+        <!-- Our Partners Section -->
+        <section class="our-partners py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Partners</h2>
+                <div class="row justify-content-center align-items-center g-4">
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner1.png" alt="Ministry of Sports Partner" class="partner-logo">
+                            <p class="partner-caption">Football Association of Zambia FAZ</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner2.png" alt="Zambia Sports Council" class="partner-logo">
+                            <p class="partner-caption">Victorious LIFE</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner3.png" alt="National Olympic Committee" class="partner-logo">
+                            <p class="partner-caption">Freely In Hope</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner4.png" alt="Churches Association" class="partner-logo">
+                            <p class="partner-caption">Zambia Sports Council NASDC</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="text-center">
+                            <img src="images/partners/partner5.png" alt="Youth Sports Foundation" class="partner-logo">
+                            <p class="partner-caption">Ministry of Sports & Youth Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -256,19 +314,17 @@
                                 <li><a href="our-work.html"><i class="bi bi-chevron-right"></i> Our Work</a></li>
                                 <li><a href="join-us.html"><i class="bi bi-chevron-right"></i> Join Us</a></li>
                                 <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
+                                <li><a href="newsletter.html"><i class="bi bi-chevron-right"></i> Newsletter & Resources – View Archive</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 mb-4">
                         <div class="footer-section">
-                            <h4>Our Values</h4>
-                            <p>Guided by Christian principles, we are committed to:</p>
-                            <ul class="footer-links">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Integrity and Excellence</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Spiritual Growth</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Holistic Development</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Community Impact</li>
-                            </ul>
+                            <h4>Support Our Mission</h4>
+                            <p>Your donations help us provide spiritual care and mentorship to athletes across Zambia.</p>
+                            <a href="donate.html" class="btn btn-primary mt-2">
+                                <i class="bi bi-heart-fill me-2"></i>Donate Now
+                            </a>
                         </div>
                     </div>
                 </div>

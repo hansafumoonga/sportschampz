@@ -94,6 +94,160 @@ button:focus,
     box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
 }
 
+/* === FIXED DONATE BUTTON === */
+/* Always visible, never collapses, never moves */
+.donate-btn-fixed {
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+/* Ensure button stays visible on all screen sizes */
+@media (max-width: 991.98px) {
+    .donate-btn-fixed {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+}
+
+/* === MOBILE NAVIGATION LAYOUT ENHANCEMENTS === */
+
+/* Hide the donate button that's currently in the navbar-collapse */
+.mobile-donate-btn {
+    display: none !important;
+}
+
+/* Desktop donate button stays visible */
+.donate-btn-fixed {
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+/* Mobile specific styles */
+@media (max-width: 991.98px) {
+    /* Reorder navbar items for mobile */
+    .navbar > .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+    }
+    
+    /* Logo stays on left */
+    .navbar-brand {
+        order: 1;
+    }
+    
+    /* Donate button positioned between logo and hamburger */
+    .donate-btn-fixed {
+        order: 2;
+        margin-left: auto;
+        margin-right: 1rem;
+        display: block !important;
+        z-index: 1050;
+        position: relative;
+    }
+    
+    /* Hamburger menu positioned at top-right */
+    .navbar-toggler {
+        order: 3;
+    }
+    
+    /* Navbar collapse content */
+    .navbar-collapse {
+        order: 4;
+        flex-basis: 100%;
+        margin-top: 1rem;
+    }
+    
+    /* Position the donate button inside the collapsed menu between logo and Home */
+    .navbar-nav .donate-btn-inline {
+        display: block !important;
+        margin: 15px auto;
+        text-align: center;
+        width: 80%;
+        max-width: 200px;
+    }
+    
+    /* Remove the margin from desktop donate button */
+    .donate-btn-fixed {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+    
+    /* Ensure navbar items stack properly */
+    .navbar-nav {
+        width: 100%;
+    }
+}
+
+/* Desktop view - hide inline donate button */
+@media (min-width: 992px) {
+    .donate-btn-inline {
+        display: none !important;
+    }
+    
+    /* Ensure mobile donate button is hidden on desktop */
+    .mobile-donate-btn {
+        display: none !important;
+    }
+}
+
+/* === DROPDOWN MENU - HOVER BEHAVIOR === */
+/* Desktop: Open on hover */
+@media (min-width: 992px) {
+    .navbar-nav .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+    
+    .navbar-nav .dropdown > .dropdown-toggle:active {
+        pointer-events: none;
+    }
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    border: 2px solid var(--primary-green);
+    border-radius: 0.375rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+    color: var(--black);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--light-green);
+    color: var(--primary-green);
+}
+
+.dropdown-toggle::after {
+    margin-left: 0.5rem;
+}
+
+/* Mobile dropdown */
+@media (max-width: 991.98px) {
+    .dropdown-menu {
+        border: none;
+        box-shadow: none;
+        padding-left: 1rem;
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+    
+    .dropdown-item {
+        padding-left: 2rem;
+    }
+    
+    .dropdown.show > .dropdown-toggle::after {
+        transform: rotate(180deg);
+    }
+}
+
+
 /* === HERO CAROUSEL === */
 #heroCarousel {
     margin-top: 76px;
@@ -227,6 +381,38 @@ section {
 /* Alternate section backgrounds */
 .bg-light-section {
     background-color: var(--gray-100);
+}
+
+/* === OUR PARTNERS SECTION === */
+.our-partners {
+    background-color: var(--gray-100);
+}
+
+.our-partners .partner-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: contain;
+    padding: 15px;
+    background-color: var(--white);
+    border: 2px solid var(--light-green);
+    transition: all 0.3s ease;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.our-partners .partner-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-orange);
+}
+
+.our-partners .partner-caption {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 10px;
+    text-align: center;
 }
 
 /* === CARDS === */
