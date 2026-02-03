@@ -17,19 +17,45 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
+            <!-- Brand: logo + football icon + slogan -->
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Sports Chaplaincy Zambia Logo" class="logo">
+                <!-- Lightweight inline SVG: person kicking a football -->
+                <div class="navbar-football-icon" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- football -->
+                        <circle cx="31" cy="12" r="5" fill="#FD7E14" stroke="#DC6A0D" stroke-width="1"/>
+                        <path d="M28.5 10 L30 13 L33 13 L31 15 L32 18 L29.5 16 L27 18 L28 15 L26 13 L29 13Z" fill="#fff" opacity=".6"/>
+                        <!-- body -->
+                        <ellipse cx="18" cy="22" rx="3.5" ry="5" fill="#198754" transform="rotate(-15 18 22)"/>
+                        <!-- head -->
+                        <circle cx="18.5" cy="15" r="3" fill="#D4A574"/>
+                        <!-- kicking leg -->
+                        <path d="M19 26 L24 30 L26.5 28.5" stroke="#198754" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                        <!-- standing leg -->
+                        <path d="M17 26 L15 32" stroke="#198754" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                        <!-- arms -->
+                        <path d="M16 20 L12 24" stroke="#D4A574" stroke-width="2" stroke-linecap="round" fill="none"/>
+                        <path d="M20 20 L22 23" stroke="#D4A574" stroke-width="2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </div>
+                <!-- Slogan -->
+                <div class="navbar-slogan">
+                    <span class="slogan-main">Bola Na Less</span>
+                    <span class="slogan-sub">Sports Chaplaincy Zambia</span>
+                </div>
             </a>
-            
-            <!-- Fixed Donate Button - Always Visible, positioned between logo and hamburger on mobile -->
+
+            <!-- Fixed Donate Button – always visible -->
             <a class="btn btn-primary btn-sm donate-btn-fixed" href="donate.html">
                 <i class="bi bi-heart-fill me-1"></i>Donate
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -44,7 +70,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="our-work.html">Our Work</a></li>
-                            <li><a class="dropdown-item" href="newsletter.html">Newsletter & Resources</a></li>
+                            <li><a class="dropdown-item" href="newsletter.html">Newsletter &amp; Resources</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -53,7 +79,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
-                    <!-- Donate button inside menu for mobile layout -->
+                    <!-- Donate inside collapsed menu (mobile only) -->
                     <li class="nav-item d-lg-none">
                         <a class="btn btn-primary btn-sm donate-btn-inline w-100" href="donate.html">
                             <i class="bi bi-heart-fill me-1"></i>Donate
@@ -91,11 +117,11 @@
         <!-- Membership Categories -->
         <section id="membership-categories" class="bg-light-section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Membership Categories</h2>
                     <p>Find the membership type that fits your calling and involvement</p>
                 </div>
-                <div class="row g-4">
+                <div class="row g-4 reveal-stagger">
                     <div class="col-lg-4 col-md-6">
                         <div class="membership-card">
                             <div class="card-icon green mx-auto mb-3">
@@ -154,7 +180,7 @@
         <!-- Membership Eligibility -->
         <section id="eligibility">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Membership Eligibility</h2>
                     <p>Requirements for joining Sports Chaplaincy Zambia</p>
                 </div>
@@ -180,7 +206,7 @@
         <!-- Member Rights & Responsibilities -->
         <section id="rights-responsibilities" class="bg-light-section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Member Rights and Responsibilities</h2>
                     <p>What membership entails</p>
                 </div>
@@ -223,7 +249,7 @@
         <!-- Becoming a Sports Chaplain -->
         <section id="become-chaplain">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Becoming a Sports Chaplain</h2>
                     <p>Training and preparation for chaplaincy ministry</p>
                 </div>
@@ -281,7 +307,7 @@
         <!-- Funding and Sustainability -->
         <section id="funding" class="bg-light-section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Supporting Our Mission</h2>
                     <p>How we sustain our work and how you can contribute</p>
                 </div>
@@ -318,7 +344,7 @@
         <!-- Call to Action -->
         <section id="join-cta">
             <div class="container text-center">
-                <h2 class="mb-4" style="color: var(--primary-green); font-weight: 700;">Ready to Join Us?</h2>
+                <h2 class="mb-4 reveal" style="color: var(--primary-green); font-weight: 700;">Ready to Join Us?</h2>
                 <p class="lead mb-4" style="color: var(--gray-600); max-width: 700px; margin: 0 auto 2rem;">Whether you're interested in becoming a member, training as a chaplain, partnering with us, or simply learning more, we'd love to hear from you. Take the next step in joining this transformative movement.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <a href="contact.html" class="btn btn-primary btn-lg">Contact Us to Join</a>
@@ -331,7 +357,7 @@
         <section class="our-partners py-5">
             <div class="container">
                 <h2 class="text-center mb-5">Our Partners</h2>
-                <div class="row justify-content-center align-items-center g-4">
+                <div class="row justify-content-center align-items-center g-4 reveal-stagger">
                     <div class="col-6 col-md-4 col-lg">
                         <div class="text-center">
                             <img src="images/partners/partner1.png" alt="Ministry of Sports Partner" class="partner-logo">

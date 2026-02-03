@@ -19,19 +19,45 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
+            <!-- Brand: logo + football icon + slogan -->
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Sports Chaplaincy Zambia Logo" class="logo">
+                <!-- Lightweight inline SVG: person kicking a football -->
+                <div class="navbar-football-icon" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- football -->
+                        <circle cx="31" cy="12" r="5" fill="#FD7E14" stroke="#DC6A0D" stroke-width="1"/>
+                        <path d="M28.5 10 L30 13 L33 13 L31 15 L32 18 L29.5 16 L27 18 L28 15 L26 13 L29 13Z" fill="#fff" opacity=".6"/>
+                        <!-- body -->
+                        <ellipse cx="18" cy="22" rx="3.5" ry="5" fill="#198754" transform="rotate(-15 18 22)"/>
+                        <!-- head -->
+                        <circle cx="18.5" cy="15" r="3" fill="#D4A574"/>
+                        <!-- kicking leg -->
+                        <path d="M19 26 L24 30 L26.5 28.5" stroke="#198754" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                        <!-- standing leg -->
+                        <path d="M17 26 L15 32" stroke="#198754" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                        <!-- arms -->
+                        <path d="M16 20 L12 24" stroke="#D4A574" stroke-width="2" stroke-linecap="round" fill="none"/>
+                        <path d="M20 20 L22 23" stroke="#D4A574" stroke-width="2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </div>
+                <!-- Slogan -->
+                <div class="navbar-slogan">
+                    <span class="slogan-main">Bola Na Less</span>
+                    <span class="slogan-sub">Sports Chaplaincy Zambia</span>
+                </div>
             </a>
-            
-            <!-- Fixed Donate Button - Always Visible, positioned between logo and hamburger on mobile -->
+
+            <!-- Fixed Donate Button – always visible -->
             <a class="btn btn-primary btn-sm donate-btn-fixed" href="donate.html">
                 <i class="bi bi-heart-fill me-1"></i>Donate
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -46,7 +72,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="our-work.html">Our Work</a></li>
-                            <li><a class="dropdown-item" href="newsletter.html">Newsletter & Resources</a></li>
+                            <li><a class="dropdown-item" href="newsletter.html">Newsletter &amp; Resources</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -55,7 +81,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
-                    <!-- Donate button inside menu for mobile layout -->
+                    <!-- Donate inside collapsed menu (mobile only) -->
                     <li class="nav-item d-lg-none">
                         <a class="btn btn-primary btn-sm donate-btn-inline w-100" href="donate.html">
                             <i class="bi bi-heart-fill me-1"></i>Donate
@@ -79,11 +105,11 @@
         <!-- Newsletter Section -->
         <section id="newsletters">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Newsletters</h2>
                     <p>Stay updated with our latest news and activities</p>
                 </div>
-                <div class="row g-4">
+                <div class="row g-4 reveal-stagger">
                     <!-- Newsletter Card 1 -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100">
@@ -186,7 +212,7 @@
         <!-- Research Section -->
         <section id="research" class="bg-light-section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Research Publications</h2>
                     <p>Evidence-based insights into sports chaplaincy and athlete well-being</p>
                 </div>
@@ -196,7 +222,7 @@
                             <p>Our research explores the intersection of faith, sports, and holistic athlete development. These publications provide valuable insights for sports chaplains, coaches, athletes, and sports organizations seeking to integrate spiritual care into their programs.</p>
                         </div>
                         
-                        <div class="row g-4">
+                        <div class="row g-4 reveal-stagger">
                             <!-- Research Item 1 -->
                             <div class="col-md-6">
                                 <div class="card h-100">
@@ -265,7 +291,7 @@
         <!-- Photo Archive Section -->
         <section id="photo-archive">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Photo Archive</h2>
                     <p>Moments from our programs, events, and community outreach</p>
                 </div>
@@ -274,86 +300,86 @@
                 <div class="row g-3" id="photoGallery">
                     <!-- Photo 1 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Chaplaincy Training Workshop">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Chaplaincy Training Workshop">
                             <img src="images/gallery/thumbs/event-1.jpg" class="img-fluid rounded" alt="Chaplaincy Training Workshop">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 2 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Community Outreach Program">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Community Outreach Program">
                             <img src="images/gallery/thumbs/event-2.jpg" class="img-fluid rounded" alt="Community Outreach">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 3 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-3.jpg" data-lightbox="gallery" data-title="Athletes Mentorship Session">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-3.jpg" data-lightbox="gallery" data-title="Athletes Mentorship Session">
                             <img src="images/gallery/thumbs/event-3.jpg" class="img-fluid rounded" alt="Mentorship Session">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 4 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/event-4.jpg" data-lightbox="gallery" data-title="Annual Sports Chaplaincy Conference">
+                        <div class="gallery-img-wrap"><a href="images/gallery/event-4.jpg" data-lightbox="gallery" data-title="Annual Sports Chaplaincy Conference">
                             <img src="images/gallery/thumbs/event-4.jpg" class="img-fluid rounded" alt="Annual Conference">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 5 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Youth Sports Program">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Youth Sports Program">
                             <img src="images/gallery/thumbs/event-5.jpg" class="img-fluid rounded" alt="Youth Program">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 6 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Team Prayer Session">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Team Prayer Session">
                             <img src="images/gallery/thumbs/event-6.jpg" class="img-fluid rounded" alt="Prayer Session">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 7 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Character Development Workshop">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Character Development Workshop">
                             <img src="images/gallery/thumbs/event-7.jpg" class="img-fluid rounded" alt="Workshop">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 8 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Sports Ministry Event">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Sports Ministry Event">
                             <img src="images/gallery/thumbs/event-8.jpg" class="img-fluid rounded" alt="Sports Ministry">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 9 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Chaplain Certification Ceremony">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Chaplain Certification Ceremony">
                             <img src="images/gallery/thumbs/event-9.jpg" class="img-fluid rounded" alt="Certification">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 10 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Athlete Counseling Session">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Athlete Counseling Session">
                             <img src="images/gallery/thumbs/event-10.jpg" class="img-fluid rounded" alt="Counseling">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 11 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Partnership Meeting">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Partnership Meeting">
                             <img src="images/gallery/thumbs/event-11.jpg" class="img-fluid rounded" alt="Partnership">
-                        </a>
+                        </a></div>
                     </div>
                     
                     <!-- Photo 12 -->
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Field Outreach Activity">
+                        <div class="gallery-img-wrap"><a href="images/gallery/thumbs/event-1.jpg" data-lightbox="gallery" data-title="Field Outreach Activity">
                             <img src="images/gallery/thumbs/event-12.jpg" class="img-fluid rounded" alt="Field Outreach">
-                        </a>
+                        </a></div>
                     </div>
                 </div>
                 
@@ -370,7 +396,7 @@
         <section class="our-partners py-5">
             <div class="container">
                 <h2 class="text-center mb-5">Our Partners</h2>
-                <div class="row justify-content-center align-items-center g-4">
+                <div class="row justify-content-center align-items-center g-4 reveal-stagger">
                     <div class="col-6 col-md-4 col-lg">
                         <div class="text-center">
                             <img src="images/partners/partner1.png" alt="Ministry of Sports Partner" class="partner-logo">

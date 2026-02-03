@@ -17,19 +17,45 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
+            <!-- Brand: logo + football icon + slogan -->
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Sports Chaplaincy Zambia Logo" class="logo">
+                <!-- Lightweight inline SVG: person kicking a football -->
+                <div class="navbar-football-icon" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- football -->
+                        <circle cx="31" cy="12" r="5" fill="#FD7E14" stroke="#DC6A0D" stroke-width="1"/>
+                        <path d="M28.5 10 L30 13 L33 13 L31 15 L32 18 L29.5 16 L27 18 L28 15 L26 13 L29 13Z" fill="#fff" opacity=".6"/>
+                        <!-- body -->
+                        <ellipse cx="18" cy="22" rx="3.5" ry="5" fill="#198754" transform="rotate(-15 18 22)"/>
+                        <!-- head -->
+                        <circle cx="18.5" cy="15" r="3" fill="#D4A574"/>
+                        <!-- kicking leg -->
+                        <path d="M19 26 L24 30 L26.5 28.5" stroke="#198754" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                        <!-- standing leg -->
+                        <path d="M17 26 L15 32" stroke="#198754" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                        <!-- arms -->
+                        <path d="M16 20 L12 24" stroke="#D4A574" stroke-width="2" stroke-linecap="round" fill="none"/>
+                        <path d="M20 20 L22 23" stroke="#D4A574" stroke-width="2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </div>
+                <!-- Slogan -->
+                <div class="navbar-slogan">
+                    <span class="slogan-main">Bola Na Less</span>
+                    <span class="slogan-sub">Sports Chaplaincy Zambia</span>
+                </div>
             </a>
-            
-            <!-- Fixed Donate Button - Always Visible, positioned between logo and hamburger on mobile -->
+
+            <!-- Fixed Donate Button – always visible -->
             <a class="btn btn-primary btn-sm donate-btn-fixed" href="donate.html">
                 <i class="bi bi-heart-fill me-1"></i>Donate
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -44,7 +70,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="our-work.html">Our Work</a></li>
-                            <li><a class="dropdown-item" href="newsletter.html">Newsletter & Resources</a></li>
+                            <li><a class="dropdown-item" href="newsletter.html">Newsletter &amp; Resources</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -53,7 +79,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
-                    <!-- Donate button inside menu for mobile layout -->
+                    <!-- Donate inside collapsed menu (mobile only) -->
                     <li class="nav-item d-lg-none">
                         <a class="btn btn-primary btn-sm donate-btn-inline w-100" href="donate.html">
                             <i class="bi bi-heart-fill me-1"></i>Donate
@@ -77,7 +103,7 @@
         <!-- Contact Information Section -->
         <section id="contact-info">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Contact Information</h2>
                     <p>Reach out to us through any of these channels</p>
                 </div>
@@ -128,7 +154,7 @@
                                     <h4>WhatsApp</h4>
                                     <p>
                                         <a href="https://wa.me/260977123456" target="_blank" rel="noopener noreferrer">
-                                            +260 977 123 456 (Chat with us)
+                                            +260 977123456
                                         </a>
                                     </p>
                                 </div>
@@ -161,7 +187,7 @@
         <!-- Map Section -->
         <section id="location-map" class="bg-light-section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Find Us on the Map</h2>
                     <p>Visit us at our office in Avondale, Lusaka</p>
                 </div>
@@ -189,7 +215,7 @@
         <!-- Additional Contact Options -->
         <section id="connect-with-us">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Connect With Us</h2>
                     <p>Stay updated on our activities and events</p>
                 </div>
@@ -253,7 +279,7 @@
         <!-- Call to Action -->
         <section id="contact-cta" class="bg-light-section">
             <div class="container text-center">
-                <h2 class="mb-4" style="color: var(--primary-green); font-weight: 700;">We're Here for You</h2>
+                <h2 class="mb-4 reveal" style="color: var(--primary-green); font-weight: 700;">We're Here for You</h2>
                 <p class="lead mb-4" style="color: var(--gray-600); max-width: 700px; margin: 0 auto 2rem;">Whether you're seeking chaplaincy support, interested in our programs, or want to partner with us, we welcome your contact. Our team is ready to serve you and answer any questions you may have.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <a href="/cdn-cgi/l/email-protection#9bf2f5fdf4dbe8ebf4e9efe8f8f3faebf7faf2f5f8e2e1faf6f9f2fab5f4e9fc" class="btn btn-primary btn-lg">
@@ -270,7 +296,7 @@
         <section class="our-partners py-5">
             <div class="container">
                 <h2 class="text-center mb-5">Our Partners</h2>
-                <div class="row justify-content-center align-items-center g-4">
+                <div class="row justify-content-center align-items-center g-4 reveal-stagger">
                     <div class="col-6 col-md-4 col-lg">
                         <div class="text-center">
                             <img src="images/partners/partner1.png" alt="Ministry of Sports Partner" class="partner-logo">
@@ -278,7 +304,7 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg">
-                  "text-center">
+                        <div class="text-center">
                             <img src="images/partners/partner3.png" alt="National Olympic Committee" class="partner-logo">
                             <p class="partner-caption">Freely In Hope</p>
                         </div>
