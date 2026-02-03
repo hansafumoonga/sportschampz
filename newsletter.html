@@ -19,26 +19,29 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <!-- Brand: logo + football icon + slogan -->
-            <a class="navbar-brand" href="index.html">
+            <!-- IMPROVED MOBILE-FIRST HORIZONTAL LAYOUT -->
+            <!-- Uses Bootstrap flex utilities for clean horizontal alignment on all screen sizes -->
+            
+            <!-- Left: Brand (logo + slogan) -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="images/logo.png" alt="Sports Chaplaincy Zambia Logo" class="logo">
-
-                <!-- Slogan -->
+                <!-- Slogan - optimized for mobile -->
                 <div class="navbar-slogan">
-                    <span class="slogan-main">Bola Na Less</span>
+                    <span class="slogan-main">Bola Na Lesa</span>
                     <span class="slogan-sub">Sports Chaplaincy Zambia</span>
                 </div>
             </a>
 
-            <!-- Fixed Donate Button – always visible -->
-            <a class="btn btn-primary btn-sm donate-btn-fixed" href="donate.html">
-                <i class="bi bi-heart-fill me-1"></i>Donate
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <!-- Right: Menu Toggler -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Center: Donate Button - positioned between brand and toggler on mobile (visually) -->
+            <a class="btn btn-primary btn-sm donate-btn-fixed d-flex align-items-center" href="donate.html">
+                <i class="bi bi-heart-fill me-1"></i>Donate
+            </a>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
