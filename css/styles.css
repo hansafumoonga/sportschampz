@@ -173,23 +173,6 @@ a:focus-visible, button:focus-visible,
 .navbar-toggler:hover   { background-color: var(--light-green); }
 .navbar-toggler:focus   { box-shadow: 0 0 0 .2rem rgba(25,135,84,.25); }
 
-/* ── Fixed Donate button – IMPROVED POSITIONING ── */
-/* Positioned centrally between brand and toggler on mobile */
-.donate-btn-fixed {
-    white-space: nowrap;
-    padding: .45rem .85rem;
-    font-size: .85rem;
-    transition: transform var(--dur-fast) var(--ease),
-                box-shadow var(--dur-fast) var(--ease);
-    flex-shrink: 0; /* Prevent button from shrinking */
-    margin-left: auto; /* Push to the right on mobile */
-    margin-right: .5rem; /* Space before toggler */
-}
-.donate-btn-fixed:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(25,135,84,.3);
-}
-
 /* ── Donate button in collapsed menu (mobile only) ── */
 .donate-btn-inline {
     margin: 12px auto;
@@ -201,69 +184,49 @@ a:focus-visible, button:focus-visible,
 /* ══════════════════════════════════════════════════════════════
    RESPONSIVE LAYOUT – MOBILE (< 992px)
    ══════════════════════════════════════════════════════════════
-   - Maintain horizontal single-row layout
-   - No wrapping or overflow
-   - Balanced spacing between all elements
-   - Hide fixed donate button when menu is open
+   - Logo and "Bola Na Lesa" stay fixed top-left
+   - Toggler button on top-right
+   - NO donate button visible on top (only in collapsed menu)
+   - Clean, uncluttered mobile navbar
    ══════════════════════════════════════════════════════════════ */
 @media (max-width: 991.98px) {
     /* Ensure single-row horizontal layout */
     .navbar > .container {
-        flex-wrap: nowrap; /* Critical: prevent wrapping */
-        gap: 0.5rem; /* Add small gap between items */
-        position: relative; /* For absolute positioning context */
+        flex-wrap: wrap; /* Allow menu to drop below */
+        gap: 0;
+        position: relative;
+        justify-content: space-between;
     }
     
-    /* Brand takes available space but can shrink */
+    /* Brand (logo + "Bola Na Lesa") - stays top-left */
     .navbar-brand {
-        flex: 1 1 auto;
-        min-width: 0; /* Allow shrinking */
+        flex: 0 1 auto;
+        min-width: 0;
         order: 1;
         position: relative;
-        z-index: 1001; /* Keep brand on top */
+        z-index: 1003; /* Keep brand on top */
+        margin-right: auto; /* Push everything else to the right */
     }
     
-    /* Menu toggler - visual order 3 (right side) */
+    /* Menu toggler - top-right */
     .navbar-toggler {
-        order: 3;
-        flex-shrink: 0;
-        margin-left: 0.5rem;
-        position: relative;
-        z-index: 1002; /* Highest z-index - always clickable */
-    }
-    
-    /* Donate button - visual order 2 (between brand and toggler) */
-    /* Hidden when navbar menu is expanded */
-    .donate-btn-fixed {
         order: 2;
-        margin-left: auto; /* Push right, creating space */
-        margin-right: 0; /* No right margin */
-        display: flex !important;
-        align-items: center;
+        flex-shrink: 0;
+        margin-left: auto;
         position: relative;
-        z-index: 1001; /* Same as brand */
-        transition: opacity 0.2s ease, visibility 0.2s ease;
+        z-index: 1003; /* Highest z-index - always clickable */
     }
     
-    /* Hide fixed donate button when menu is expanded */
-    .navbar-collapse.show ~ .donate-btn-fixed {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
-    
-    /* Also hide during collapse animation */
-    .navbar-collapse.collapsing ~ .donate-btn-fixed {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+    /* HIDE the fixed donate button completely on mobile */
+    .donate-btn-fixed {
+        display: none !important;
     }
     
     /* Collapsed menu expands full width below */
     .navbar-collapse {
-        order: 4;
+        order: 3;
         flex-basis: 100%;
-        margin-top: .75rem;
+        margin-top: .5rem;
         position: relative;
         z-index: 1000; /* Below toggler and brand */
         background-color: var(--white); /* Ensure solid background */
@@ -271,18 +234,30 @@ a:focus-visible, button:focus-visible,
     
     .navbar-nav {
         width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
     
     /* Show donate button inside collapsed menu */
     .navbar-nav .donate-btn-inline {
         display: block !important;
         margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
     }
     
-    /* Hide sub-slogan on mobile for space efficiency */
+    /* Keep "Bola Na Lesa" visible on mobile */
+    .navbar-slogan .slogan-main {
+        font-size: .80rem;
+    }
+    
+    /* Hide sub-slogan on very small screens */
     .navbar-slogan .slogan-sub {
         display: none;
+    }
+    
+    /* Reduce logo size slightly on mobile */
+    .navbar .logo {
+        height: 45px;
     }
 }
 
@@ -292,12 +267,52 @@ a:focus-visible, button:focus-visible,
         display: none !important;
     }
     
-    /* Desktop: donate button positioned after nav links */
-    .donate-btn-fixed {
-        margin-left: 1.5rem;
-        margin-right: 0;
-        order: 0; /* Natural HTML order on desktop */
+    /* Desktop: donate button in navbar */
+    .navbar-nav .btn-primary {
+        padding: .45rem .85rem;
+        font-size: .85rem;
+        white-space: nowrap;
+        transition: transform var(--dur-fast) var(--ease),
+                    box-shadow var(--dur-fast) var(--ease);
     }
+    
+    .navbar-nav .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 3px 10px rgba(25,135,84,.3);
+    }
+}
+
+/* Extra small screens - further optimize spacing */
+@media (max-width: 575.98px) {
+    .navbar .logo {
+        height: 40px; /* Smaller logo on very small screens */
+    }
+    
+    .navbar-slogan .slogan-main {
+        font-size: .75rem; /* Slightly smaller text */
+    }
+    
+    .navbar-brand {
+        gap: 6px; /* Tighter gap */
+    }
+    
+    .navbar > .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* Very small screens - minimal branding */
+@media (max-width: 374.98px) {
+    .navbar .logo {
+        height: 36px;
+    }
+    
+    .navbar-slogan .slogan-main {
+        font-size: .70rem;
+        letter-spacing: 0;
+    }
+}
     
     .navbar-toggler {
         order: 0; /* Natural HTML order */

@@ -31,15 +31,10 @@
             </a>
 
             <!-- Right: Menu Toggler -->
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Center: Donate Button - positioned between brand and toggler on mobile (visually) -->
-            <a class="btn btn-primary btn-sm donate-btn-fixed d-flex align-items-center" href="donate.html">
-                <i class="bi bi-heart-fill me-1"></i>Donate
-            </a>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -63,6 +58,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <!-- Donate button for desktop (shown after menu items) -->
+                    <li class="nav-item d-none d-lg-block ms-2">
+                        <a class="btn btn-primary btn-sm" href="donate.html">
+                            <i class="bi bi-heart-fill me-1"></i>Donate
+                        </a>
                     </li>
                     <!-- Donate inside collapsed menu (mobile only) -->
                     <li class="nav-item d-lg-none">
